@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  agentverse-dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+      - "8000:8000"
+    environment:
+      - HW_SYSTEM_MODE=auto
+      - HW_PRIVILEGE_MODE=scoped_sudo
+      - EMBEDDING_PROVIDER=sentence_transformers
+    volumes:
+      - .:/app
+    command: streamlit run web_dashboard/app.py --server.port=8501 --server.address=0.0.0.0
+
+  api-server:
+    build: .
+    ports:
+      - "8001:8000"
+    environment:
+      - PYTHONPATH=/app/problem1_agent_social_network
+    volumes:
+      - .:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --app-dir problem1_agent_social_network

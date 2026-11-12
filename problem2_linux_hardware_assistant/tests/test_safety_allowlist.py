@@ -2,8 +2,8 @@
 Unit Tests for Execution Safety, Allow-listing, and Injection Prevention.
 """
 import pytest
-from app.execution_engine import execution_engine, SecurityExecutionError
-from app.config import SAFE_COMMAND_ALLOWLIST
+from hardware_assistant.execution_engine import execution_engine, SecurityExecutionError
+from hardware_assistant.config import SAFE_COMMAND_ALLOWLIST
 
 def test_allowlisted_tools_present():
     assert "get_cpu_info" in SAFE_COMMAND_ALLOWLIST

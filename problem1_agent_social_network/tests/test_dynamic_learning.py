@@ -6,9 +6,9 @@ import numpy as np
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.models.database import Base, AgentModel, PostModel, RoutingLogModel, CommentModel
-from app.feedback.dynamic_learning import dynamic_learner
-from app.routing.embedding_engine import embedding_manager
+from agent_network.models.database import Base, AgentModel, PostModel, RoutingLogModel, CommentModel
+from agent_network.feedback.dynamic_learning import dynamic_learner
+from agent_network.routing.embedding_engine import embedding_manager
 
 @pytest.fixture
 def db_session():

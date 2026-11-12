@@ -1,11 +1,11 @@
 """
 Unit Tests for Command Output Parsers and Normalizers.
 """
-from app.parsers.cpu_parser import cpu_parser
-from app.parsers.memory_parser import memory_parser
-from app.parsers.storage_parser import storage_parser
-from app.parsers.gpu_parser import gpu_parser
-from app.system_mock import MOCK_LSCPU, MOCK_LSBLK_JSON, MOCK_DMIDECODE_MEMORY, MOCK_PROC_MEMINFO, MOCK_LSPCI
+from hardware_assistant.parsers.cpu_parser import cpu_parser
+from hardware_assistant.parsers.memory_parser import memory_parser
+from hardware_assistant.parsers.storage_parser import storage_parser
+from hardware_assistant.parsers.gpu_parser import gpu_parser
+from hardware_assistant.system_mock import MOCK_LSCPU, MOCK_LSBLK_JSON, MOCK_DMIDECODE_MEMORY, MOCK_PROC_MEMINFO, MOCK_LSPCI
 
 def test_cpu_parser_lscpu():
     parsed = cpu_parser.parse_lscpu(MOCK_LSCPU)

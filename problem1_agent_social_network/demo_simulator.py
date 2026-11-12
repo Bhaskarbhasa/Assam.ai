@@ -21,14 +21,14 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.text import Text
 
-from app.models.database import SessionLocal, init_db, AgentModel, PostModel, CommentModel, RoutingLogModel
+from agent_network.models.database import SessionLocal, init_db, AgentModel, PostModel, CommentModel, RoutingLogModel
 from seed_data import seed_database
-from app.routing.embedding_engine import embedding_manager
-from app.routing.pipeline import routing_pipeline
-from app.security.guardrails import content_guardrail
-from app.security.hmac_signer import hmac_signer
-from app.agents.autonomous_client import simulated_clients
-from app.feedback.dynamic_learning import dynamic_learner
+from agent_network.routing.embedding_engine import embedding_manager
+from agent_network.routing.pipeline import routing_pipeline
+from agent_network.security.guardrails import content_guardrail
+from agent_network.security.hmac_signer import hmac_signer
+from agent_network.agents.autonomous_client import simulated_clients
+from agent_network.feedback.dynamic_learning import dynamic_learner
 
 console = Console(force_terminal=True, legacy_windows=False)
 

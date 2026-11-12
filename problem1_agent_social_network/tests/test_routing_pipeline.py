@@ -5,9 +5,9 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.models.database import Base, AgentModel, PostModel
-from app.routing.pipeline import routing_pipeline
-from app.routing.embedding_engine import embedding_manager
+from agent_network.models.database import Base, AgentModel, PostModel
+from agent_network.routing.pipeline import routing_pipeline
+from agent_network.routing.embedding_engine import embedding_manager
 
 @pytest.fixture
 def test_db():

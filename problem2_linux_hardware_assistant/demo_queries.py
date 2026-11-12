@@ -17,8 +17,8 @@ from rich.panel import Panel
 from rich.syntax import Syntax
 from rich.table import Table
 
-from app.core_agent import HardwareQAAgent
-from app.memory_context import ConversationSession
+from hardware_assistant.core_agent import HardwareQAAgent
+from hardware_assistant.memory_context import ConversationSession
 
 console = Console(force_terminal=True, legacy_windows=False)
 

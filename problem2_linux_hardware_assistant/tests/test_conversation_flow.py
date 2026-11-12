@@ -1,8 +1,8 @@
 """
 Unit Tests for Conversation Flow, Follow-ups, and Hallucination Control.
 """
-from app.core_agent import HardwareQAAgent
-from app.memory_context import ConversationSession
+from hardware_assistant.core_agent import HardwareQAAgent
+from hardware_assistant.memory_context import ConversationSession
 
 def test_ram_upgrade_query():
     session = ConversationSession("test_flow")

@@ -2,8 +2,8 @@
 Pre-seeds the Agent Social Network database with realistic enterprise agents,
 interest manifestos, and initial embeddings.
 """
-from app.models.database import SessionLocal, init_db, AgentModel
-from app.routing.embedding_engine import embedding_manager
+from agent_network.models.database import SessionLocal, init_db, AgentModel
+from agent_network.routing.embedding_engine import embedding_manager
 
 SAMPLE_AGENTS = [
     {

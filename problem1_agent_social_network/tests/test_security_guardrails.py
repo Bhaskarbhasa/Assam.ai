@@ -4,8 +4,8 @@ Unit Tests for Security, HMAC Signing, and Prompt Injection Defense.
 import time
 import json
 import pytest
-from app.security.guardrails import content_guardrail
-from app.security.hmac_signer import hmac_signer
+from agent_network.security.guardrails import content_guardrail
+from agent_network.security.hmac_signer import hmac_signer
 
 def test_clean_content_passes_guardrail():
     title = "Festive Food Delivery Offer"
